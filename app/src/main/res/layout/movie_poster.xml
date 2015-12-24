@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="@dimen/width_185"
+        android:layout_height="@dimen/height_277"
+        android:scaleType="centerCrop"
+        android:layout_weight="1"
+        android:id="@+id/poster_image"/>
+    <TextView
+        android:layout_width="@dimen/width_185"
+        android:layout_height="@dimen/height_95"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorRed"
+        android:id="@+id/movie_title_rating"/>
+
+
+</LinearLayout>
