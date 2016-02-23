@@ -28,7 +28,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.udacity.maar.popularmovies.MainActivity" />
         </activity>
-        <activity
+      <!--  <activity
             android:name=".DetailActivity"
             android:label="@string/title_activity_detail"
             android:parentActivityName=".MainActivity"
@@ -36,7 +36,22 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.udacity.maar.popularmovies.MainActivity" />
+        </activity>-->
+
+        <activity
+            android:name=".MoviesDetailActivity"
+            android:label="@string/title_activity_scrolling_movies_detail"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.udacity.maar.popularmovies.MainActivity" />
         </activity>
+        <provider
+            android:name="com.udacity.maar.popularmovies.provider.MovieProvider"
+            android:authorities="com.udacity.maar.popularmovies"
+            android:enabled="true"
+            android:exported="false" >
+        </provider>
     </application>
 
 </manifest>

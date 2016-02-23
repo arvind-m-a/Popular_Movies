@@ -1,23 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movie_container"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:layout_margin="4dp"
+    android:clickable="true">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <ImageView
         android:layout_width="@dimen/width_185"
         android:layout_height="@dimen/height_277"
         android:scaleType="centerCrop"
-        android:layout_weight="1"
+        android:contentDescription=""
         android:id="@+id/poster_image"/>
-    <TextView
-        android:layout_width="@dimen/width_185"
-        android:layout_height="@dimen/height_95"
-        android:fontFamily="sans-serif"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:textColor="@color/colorWhite"
-        android:background="@color/colorRed"
-        android:id="@+id/movie_title_rating"/>
+    </FrameLayout>
 
+    <LinearLayout
+        android:id="@+id/movie_footer"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="@dimen/width_185"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:id="@+id/movie_title"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorRed"/>
+        <TextView
+            android:layout_width="@dimen/width_185"
+            android:layout_height="wrap_content"
+            android:id="@+id/movie_voting"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorRed"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
+    </android.support.v7.widget.CardView>

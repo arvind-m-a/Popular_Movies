@@ -10,13 +10,22 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+import com.udacity.maar.popularmovies.fragment.TestFragment;
 
+public class MainActivity extends AppCompatActivity {
+    public boolean mTwoPane;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        if(findViewById(R.id.detailContainer)!=null){
+            mTwoPane = true;
+        }
+        else{
+            mTwoPane = false;
+        }
+        TestFragment testFragment = new TestFragment();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment, testFragment).commit();
     }
 
     @Override
@@ -34,10 +43,10 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+      /*  if (id == R.id.action_settings) {
             startActivity(new Intent(this, SettingsActivity.class));
             return true;
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }

@@ -9,13 +9,51 @@ import android.os.Parcelable;
 public class Movie implements Parcelable {
 
 
-   private String poster_path;
+    public void setPoster_path(String poster_path) {
+        this.poster_path = poster_path;
+    }
+
+    public void setBackdrop_path(String backdrop_path) {
+        this.backdrop_path = backdrop_path;
+    }
+
+    public void setRelease_date(String release_date) {
+        this.release_date = release_date;
+    }
+
+    public void setVote_average(Double vote_average) {
+        this.vote_average = vote_average;
+    }
+
+    public void setOriginal_title(String original_title) {
+        this.original_title = original_title;
+    }
+
+    public void setOver_view(String over_view) {
+        this.over_view = over_view;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    private String poster_path;
    private String backdrop_path;
    private String release_date;
    private Double vote_average;
    private String original_title;
    private String over_view;
    private Long id;
+
+    public boolean isVideo() {
+        return video;
+    }
+
+    public void setVideo(boolean video) {
+        this.video = video;
+    }
+
+    private boolean video;
 
     public Movie(Long id, String poster_path, String backdrop_path, String release_date, Double vote_average, String original_title, String over_view){
         this.id = id;
@@ -25,6 +63,9 @@ public class Movie implements Parcelable {
         this.original_title = original_title;
         this.over_view = over_view;
         this.poster_path = poster_path;
+    }
+    public Movie(){
+
     }
 
     private Movie(Parcel in){

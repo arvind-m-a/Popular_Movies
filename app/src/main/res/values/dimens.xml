@@ -13,4 +13,7 @@
     <dimen name="margin20">20dp</dimen>
     <dimen name="margin40">40dp</dimen>
     <dimen name="margin48">48dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+
 </resources>
